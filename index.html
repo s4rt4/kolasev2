@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kolase Foto</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="dist/css/all.min.css">
+
+
+  <!-- LightGallery CSS (lokal) -->
+  <link rel="stylesheet" href="dist/css/lightgallery-bundle.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+  <div class="left-buttons">
+    <button id="refreshBtn" class="btn">
+      <i class="fa-solid fa-shuffle"></i> Acak
+    </button>
+  </div>
+
+  <div class="right-buttons">
+  <button id="toggleTheme" class="btn">
+    <i class="fa-solid fa-moon"></i> / <i class="fa-solid fa-sun"></i>
+  </button>
+  <button id="openFilter" class="btn">
+    <i class="fa-solid fa-filter"></i> Filter
+  </button>
+</div>
+</header>
+
+<!-- Sidebar Filter -->
+<aside id="filterSidebar">
+  <div class="sidebar-header">
+    <h3>Filter</h3>
+    <button id="closeFilter" class="btn">&times;</button>
+  </div>
+  <div class="sidebar-body">
+  <select id="filterKategori" class="btn"></select>
+  <select id="filterFotografer" class="btn"></select>
+  <input type="text" id="searchInput" placeholder="Cari judul..." class="btn">
+  <input type="date" id="searchDate" class="btn">
+
+  <button id="applyFilter" class="btn"><i class="fa-solid fa-filter"></i> Terapkan Filter</button>
+  <button id="clearFilter" class="btn"><i class="fa-solid fa-xmark"></i> Clear Filter</button>
+</div>
+
+</aside>
+
+
+  <!-- Gallery -->
+  <main>
+    <div id="gallery">
+      <div class="grid-sizer"></div>
+    </div>
+    <div class="text-center">
+      <button id="loadMoreBtn" class="btn"><i class="fa-solid fa-plus"></i> Load More</button>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Kolase Foto. Dibuat dengan <i class="fa-solid fa-heart"></i> untuk Kamu.</p>
+    <p>Foto-foto berasal dari <a href="https://unsplash.com/" target="_blank">Unsplash</a>. 
+       Terima kasih kepada para fotografer.</p>
+    <button id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
+  </footer>
+<!-- Masonry + imagesLoaded (lokal) -->
+<script src="dist/js/masonry.pkgd.min.js"></script>
+<script src="dist/js/imagesloaded.pkgd.min.js"></script>
+
+
+  <!-- LightGallery JS (lokal) -->
+ 
+<script src="dist/lightgallery.umd.js"></script>
+<script src="dist/plugins/zoom/lg-zoom.umd.js"></script>
+<script src="dist/plugins/fullscreen/lg-fullscreen.umd.js"></script>
+<script src="dist/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+<script src="dist/plugins/autoplay/lg-autoplay.umd.js"></script>
+<script src="dist/plugins/share/lg-share.umd.js"></script>
+<script src="dist/plugins/pager/lg-pager.umd.js"></script>
+<script src="dist/plugins/mediumZoom/lg-medium-zoom.umd.js"></script>
+
+  
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+</html>

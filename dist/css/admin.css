@@ -1,0 +1,93 @@
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(180deg, #6a11cb, #2575fc);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.sidebar.collapsed {
+  transform: translateX(-250px);
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 12px 20px;
+  transition: background 0.2s;
+}
+
+.sidebar a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.sidebar .active {
+  background: rgba(255,255,255,0.3);
+  font-weight: bold;
+}
+
+/* Content */
+.content {
+  margin-left: 250px;
+  flex-grow: 1;
+  padding: 70px 20px 20px; /* jarak atas biar tombol hamburger tidak menimpa */
+  background: #f5f6fa;
+  min-height: 100vh;
+  transition: margin-left 0.3s ease;
+}
+
+.content.expanded {
+  margin-left: 0;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: #6a11cb;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* Chart */
+#donutChart {
+  width: 100% !important;
+  max-width: 400px;
+  height: auto !important;
+}
+
+#barChart {
+  width: 100% !important;
+  height: 300px !important;
+}
+
+.chart-card {
+  height: 350px;
+}
+
+.chart-card canvas {
+  max-height: 280px;
+}
+
+form input.form-control-sm {
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  box-shadow: none;
+}
+
+form input.form-control-sm:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 5px rgba(37,117,252,0.4);
+}
